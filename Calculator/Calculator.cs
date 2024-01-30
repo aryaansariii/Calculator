@@ -165,6 +165,8 @@ namespace Calculator
                     break;
             }
 
+            sign = ' ';
+
             txtNumber.Text = Convert.ToString(output);
         }
 
@@ -210,6 +212,17 @@ namespace Calculator
             output = Convert.ToDouble(txtNumber.Text);
 
             txtNumber.Text = "0";
+        }
+
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            if (txtNumber.TextLength == 12)
+                return;
+
+            if (txtNumber.Text.Contains('.'))
+                return;
+
+            txtNumber.Text = txtNumber.Text + ".";
         }
     }
 }
