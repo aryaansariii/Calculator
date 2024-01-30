@@ -149,6 +149,9 @@ namespace Calculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
+            if (sign == ' ')
+                return;
+
             switch (sign)
             {
                 case '+':
